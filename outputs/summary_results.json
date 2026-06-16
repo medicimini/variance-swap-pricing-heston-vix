@@ -1,0 +1,59 @@
+{
+  "data_validation": {
+    "n_rows": 720,
+    "n_maturities": 12,
+    "n_strikes": 60,
+    "min_maturity": 0.08333333333333333,
+    "max_maturity": 1.0,
+    "min_strike": 70.0,
+    "max_strike": 130.0,
+    "min_price": 0.01929441860666348,
+    "max_price": 35.24622143206202,
+    "has_target_maturity": true
+  },
+  "calibrated_heston_params": {
+    "v0": 0.14806558751816246,
+    "kappa": 2.4384050711134795,
+    "theta": 0.08844403940157962,
+    "sigma": 0.3885579787947679,
+    "rho": -0.4909760962074055
+  },
+  "calibration": {
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "objective_value_rmse": 0.03956429443916997,
+    "n_iterations": 47,
+    "diagnostics": {
+      "rmse": 0.03956429443916997,
+      "mae": 0.028927212502810818,
+      "max_abs_error": 0.15762271770277891,
+      "mean_error": 0.00029260443936456943,
+      "feller_margin": 0.280347485488069
+    }
+  },
+  "approach_1_analytical_heston": {
+    "K_var": 0.12925673393522524,
+    "vol_strike": 0.35952292546543574,
+    "mean_reversion_weight": 0.6845292653897759
+  },
+  "approach_2_monte_carlo": {
+    "K_var": 0.12987735791115185,
+    "vol_strike": 0.36038501343861656,
+    "standard_error": 0.0002992458415359364,
+    "confidence_interval_95": [
+      0.1292908360617414,
+      0.13046387976056228
+    ],
+    "n_paths": 20000,
+    "n_steps": 84,
+    "mean_terminal_price": 101.54217816937539,
+    "mean_terminal_variance": 0.11534509892023027
+  },
+  "approach_3_vix_style": {
+    "K_var": 0.12282605073603241,
+    "vol_strike": 0.3504654772385326,
+    "forward": 101.68063303862608,
+    "K0": 101.52542372881348,
+    "n_options": 60
+  }
+}
