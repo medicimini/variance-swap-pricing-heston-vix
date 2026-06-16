@@ -1,4 +1,4 @@
-# Financial Engineering 2026 — Variance Swap Project
+# Variance Swap Project
 
 This refactoring turns the separate notebooks into one coherent Python project for the variance swap assignment.
 
