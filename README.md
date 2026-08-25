@@ -1,10 +1,6 @@
-# Variance Swap Project
-
-This refactoring turns the separate notebooks into one coherent Python project for the variance swap assignment.
-
 ## What this project does
 
-1. Loads and validates the assigned raw option data.
+1. Loads and validates raw option data.
 2. Prices vanilla calls under Heston with the Carr-Madan FFT formula.
 3. Calibrates Heston parameters to the full option surface.
 4. Calculates the variance swap strike using:
@@ -48,11 +44,3 @@ The runner uses only NumPy, SciPy, Pandas and Matplotlib.
 - Heston calibration minimizes RMSE between market call prices and FFT model prices across all available maturities.
 - Monte Carlo uses an Euler full-truncation scheme for the variance process and log-Euler stock updates so stock paths remain positive.
 - The variance swap maturity is fixed at four months, `T = 4/12`, with `n = 84` daily monitoring steps.
-
-## What was fixed compared with the uploaded notebooks
-
-- Removed notebook-order dependencies and replaced them with importable modules.
-- Fixed the Monte Carlo syntax error in the parameter-reporting block.
-- Removed placeholder cells and examples that could run before required variables existed.
-- Centralized assignment assumptions in `config.py`.
-- Added structured outputs suitable for writing the report.
